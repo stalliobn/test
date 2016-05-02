@@ -1,0 +1,69 @@
+@import 'variables', 'mixins', 'normalize', 'grid';
+@import 'parts/header', 'parts/form', 'parts/sliders', 'parts/main', 'parts/footer';
+html {
+  &:before {
+    content: "#{inspect($breakpoints)}";
+    display: none;
+  }
+}
+.clearfix {
+  @each $pseudo in after before {
+    &:#{$pseudo} {
+      content: '';
+      display: table;
+    }
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.m-bottom-20 {
+  margin-bottom: 20px;
+}
+.market-orange {
+  color: #ffa352;
+  padding-left: 15px;
+  border-left: 3px solid #ffa352;
+  line-height: 16px;
+  font-weight: lighter;
+}
+.white-bg {
+  z-index: 150;
+  position: relative;
+  background: #f8f8f8;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.38);
+}
+.pad-l-70 {
+  padding-left: 70px;
+  @include breakpoint((to: 992px)) {
+    padding-left: 0;
+  }
+}
+body {
+  font-family: 'SourceSansProRegular', 'SourceSansProRegular';
+  font-size: 14px;
+}
+img {
+  max-width: 100%;
+}
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url("../fonts/SourceSansProRegular/SourceSansProRegular.eot");
+  src: url("../fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff"),
+  url("../fonts/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansProLight";
+  src: url("../fonts/SourceSansProLight/SourceSansProLight.eot");
+  src: url("../fonts/SourceSansProLight/SourceSansProLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"),
+  url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
