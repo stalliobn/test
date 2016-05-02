@@ -34,6 +34,9 @@ html {
   position: relative;
   background: #f8f8f8;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.38);
+  @include breakpoint((to: 992px)) {
+    padding-bottom: 15px;
+  }
 }
 .pad-l-70 {
   padding-left: 70px;
@@ -42,7 +45,7 @@ html {
   }
 }
 body {
-  font-family: 'SourceSansProRegular', 'SourceSansProRegular';
+  font-family: 'SourceSansProRegular';
   font-size: 14px;
 }
 img {
