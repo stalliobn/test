@@ -104,7 +104,7 @@
     $('.progress-line').animate({
       'width': number + '%'
     }, 200);
-    $('.load-line span').text(number + '%');
+    $('.line span').text(number + '%');
     activeTab();
   }
 
